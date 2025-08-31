@@ -1,25 +1,42 @@
 body {
-    font-family: 'Minecraftia', sans-serif; /* Tu peux chercher une police style Minecraft et l'importer, sinon laisse sans-serif */
-    background-color: #2e2e2e; /* Fond gris foncé */
-    color: #f8f8f8; /* Texte blanc cassé */
+    font-family: sans-serif;
+    background-color: #2e2e2e;
+    color: #f8f8f8;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/581/248/desktop-wallpaper-how-to-reduce-lag-in-the-shaders-mod-minecraft-1-7-1-8-august-backgrounds-minecraft-iphone.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
 }
 
 header {
-    background-color: #4a6a3b; /* Vert forêt foncé, couleur Minecraft */
+    background-color: #4a6a3b;
     padding: 30px 20px;
     text-align: center;
-    border-bottom: 3px solid #3c5531; /* Bordure vert plus foncé */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    border-bottom: 3px solid #3c5531;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    color: #ffeb3b; /* Jaune or éclatant, comme les lingots d'or */
+    color: #ffeb3b;
     font-size: 2.8em;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre sur le titre */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header p {
@@ -27,10 +44,9 @@ header p {
     font-size: 1.2em;
 }
 
-/* Style pour la barre de recherche */
 .search-container {
     padding: 20px;
-    background-color: #383838; /* Gris légèrement plus clair */
+    background-color: #383838;
     text-align: center;
     border-bottom: 2px solid #282828;
     margin-bottom: 20px;
@@ -39,12 +55,12 @@ header p {
 .search-container input[type="text"] {
     width: 60%;
     padding: 12px 15px;
-    border: 2px solid #6b4d3f; /* Bordure marron, comme le bois */
+    border: 2px solid #6b4d3f;
     border-radius: 5px;
     font-size: 1.1em;
-    background-color: #5d5d5d; /* Fond de l'input */
+    background-color: #5d5d5d;
     color: #f8f8f8;
-    outline: none; /* Supprime le contour bleu au focus */
+    outline: none;
 }
 
 .search-container input[type="text"]::placeholder {
@@ -56,27 +72,27 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    gap: 25px; /* Augmente l'espace entre les cartes */
+    gap: 25px;
 }
 
 .farm-card {
-    background-color: #4f4f4f; /* Gris moyen */
-    border-radius: 10px; /* Bords légèrement plus arrondis */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
-    width: 320px; /* Légèrement plus large */
+    background-color: #4f4f4f;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    width: 320px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #6b4d3f; /* Bordure comme du bois */
+    border: 1px solid #6b4d3f;
 }
 
 .farm-card:hover {
-    transform: translateY(-8px) scale(1.02); /* Effet plus prononcé au survol */
+    transform: translateY(-8px) scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 .farm-card img {
     width: 100%;
-    height: 200px; /* Légèrement plus haut */
+    height: 200px;
     object-fit: cover;
     border-bottom: 1px solid #6b4d3f;
 }
@@ -87,7 +103,7 @@ main {
 
 .farm-info h2 {
     margin: 0 0 12px 0;
-    color: #a0ff8c; /* Vert clair, comme la terre */
+    color: #a0ff8c;
     font-size: 1.6em;
 }
 
