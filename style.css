@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
-    background-color: #0d1a2d; /* Bleu très foncé, presque noir */
+    background-color: #000047; /* Bleu très foncé, presque noir */
     color: #e0e0e0; /* Texte clair */
     margin: 0;
     padding: 0;
@@ -28,10 +28,10 @@ body::before {
 }
 
 header {
-    background-color: #1a3a5d; /* Bleu marine élégant */
+    background-color: ##000047; /* Bleu marine élégant */
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 4px solid #0f2b4a; /* Bordure bleue plus foncée */
+    border-bottom: 4px solid #000047; /* Bordure bleue plus foncée */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Ombre prononcée */
     position: relative;
     z-index: 1; /* S'assure que le header est au-dessus du calque de fond */
