@@ -1,18 +1,21 @@
 body {
-    font-family: sans-serif;
-    background-color: #2e2e2e;
-    color: #f8f8f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
+    background-color: #0d1a2d; /* Bleu très foncé, presque noir */
+    color: #e0e0e0; /* Texte clair */
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    
+
+    /* Image de fond Minecraft unique */
     background-image: url('https://e1.pxfuel.com/desktop-wallpaper/581/248/desktop-wallpaper-how-to-reduce-lag-in-the-shaders-mod-minecraft-1-7-1-8-august-backgrounds-minecraft-iphone.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     position: relative;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
+/* Calque sombre sur l'image de fond pour une meilleure lisibilité */
 body::before {
     content: '';
     position: absolute;
@@ -20,103 +23,157 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7); /* Plus opaque pour le thème sombre */
     z-index: -1;
 }
 
 header {
-    background-color: #4a6a3b;
-    padding: 30px 20px;
+    background-color: #1a3a5d; /* Bleu marine élégant */
+    padding: 40px 20px;
     text-align: center;
-    border-bottom: 3px solid #3c5531;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid #0f2b4a; /* Bordure bleue plus foncée */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Ombre prononcée */
+    position: relative;
+    z-index: 1; /* S'assure que le header est au-dessus du calque de fond */
 }
 
 header h1 {
-    color: #ffeb3b;
-    font-size: 2.8em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #87ceeb; /* Bleu ciel doux pour le titre */
+    font-size: 3.2em;
+    margin-bottom: 12px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Ombre plus douce */
+    letter-spacing: 1px;
 }
 
 header p {
-    color: #e0e0e0;
-    font-size: 1.2em;
+    color: #b0c4de; /* Bleu clair grisâtre */
+    font-size: 1.3em;
+    font-weight: 300;
 }
 
+/* Barre de recherche personnalisée et plus belle */
 .search-container {
-    padding: 20px;
-    background-color: #383838;
+    padding: 25px 20px;
+    background-color: #1a3a5d; /* Même bleu que le header pour l'unité */
     text-align: center;
-    border-bottom: 2px solid #282828;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #0f2b4a;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 .search-container input[type="text"] {
-    width: 60%;
-    padding: 12px 15px;
-    border: 2px solid #6b4d3f;
-    border-radius: 5px;
-    font-size: 1.1em;
-    background-color: #5d5d5d;
+    width: 70%; /* Plus large pour une meilleure saisie */
+    max-width: 500px;
+    padding: 14px 20px;
+    border: 2px solid #4682b4; /* Bordure bleu acier */
+    border-radius: 30px; /* Bords très arrondis (pill-shaped) */
+    font-size: 1.2em;
+    background-color: #2b4f7a; /* Fond de l'input bleu moyen */
     color: #f8f8f8;
     outline: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre interne */
+    transition: all 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #87ceeb; /* Bordure bleu ciel au focus */
+    background-color: #3b6b9d; /* Légèrement plus clair au focus */
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5); /* Lueur bleue au focus */
 }
 
 .search-container input[type="text"]::placeholder {
-    color: #cccccc;
+    color: #a0b0c0; /* Placeholder plus doux */
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
-    gap: 25px;
+    padding: 30px 20px;
+    gap: 30px; /* Espacement accru entre les cartes */
+    position: relative;
+    z-index: 1;
 }
 
 .farm-card {
-    background-color: #4f4f4f;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    width: 320px;
+    background-color: #2b4f7a; /* Bleu moyen pour les cartes */
+    border-radius: 12px; /* Bords plus arrondis */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5); /* Ombre plus forte */
+    width: 340px; /* Plus large */
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #6b4d3f;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid #4682b4; /* Bordure bleu acier */
+    display: flex; /* Utilise flexbox pour le contenu de la carte */
+    flex-direction: column;
 }
 
 .farm-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-10px) scale(1.03); /* Effet plus dynamique au survol */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
 }
 
 .farm-card img {
     width: 100%;
-    height: 200px;
+    height: 220px; /* Légèrement plus haut */
     object-fit: cover;
-    border-bottom: 1px solid #6b4d3f;
+    border-bottom: 1px solid #4682b4;
+    transition: transform 0.3s ease; /* Transition pour l'image au survol */
+}
+
+.farm-card:hover img {
+    transform: scale(1.05); /* Zoom léger de l'image au survol de la carte */
 }
 
 .farm-info {
-    padding: 18px;
+    padding: 20px;
+    flex-grow: 1; /* Prend l'espace restant dans la carte */
 }
 
 .farm-info h2 {
-    margin: 0 0 12px 0;
-    color: #a0ff8c;
-    font-size: 1.6em;
+    margin: 0 0 15px 0;
+    color: #87ceeb; /* Bleu ciel pour les titres de carte */
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .farm-info p {
-    margin: 0 0 8px 0;
-    color: #dddddd;
+    margin: 0 0 10px 0;
+    color: #c0d0e0; /* Texte bleu clair */
 }
 
 footer {
-    background-color: #4a6a3b;
-    color: #e0e0e0;
+    background-color: #1a3a5d;
+    color: #b0c4de;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-    border-top: 3px solid #3c5531;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 4px solid #0f2b4a;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
+}
+
+/* Media Queries pour l'adaptabilité (Responsive Design) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .search-container input[type="text"] {
+        width: 85%;
+        font-size: 1em;
+    }
+    .farm-card {
+        width: 90%; /* Prend plus de largeur sur les petits écrans */
+    }
+    .farm-card img {
+        height: 180px;
+    }
+    .farm-info h2 {
+        font-size: 1.4em;
+    }
 }
