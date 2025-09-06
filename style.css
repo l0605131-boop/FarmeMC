@@ -1,21 +1,19 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
-    background-color: #000047; /* Bleu très foncé, presque noir */
-    color: #e0e0e0; /* Texte clair */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d1a2d;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 
-    /* Image de fond Minecraft unique */
     background-image: url('https://e1.pxfuel.com/desktop-wallpaper/581/248/desktop-wallpaper-how-to-reduce-lag-in-the-shaders-mod-minecraft-1-7-1-8-august-backgrounds-minecraft-iphone.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     position: relative;
-    overflow-x: hidden; /* Empêche le défilement horizontal */
+    overflow-x: hidden;
 }
 
-/* Calque sombre sur l'image de fond pour une meilleure lisibilité */
 body::before {
     content: '';
     position: absolute;
@@ -23,38 +21,37 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Plus opaque pour le thème sombre */
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: -1;
 }
 
 header {
-    background-color: ##000047; /* Bleu marine élégant */
+    background-color: #1a3a5d;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 4px solid #000047; /* Bordure bleue plus foncée */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Ombre prononcée */
+    border-bottom: 4px solid #0f2b4a;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     position: relative;
-    z-index: 1; /* S'assure que le header est au-dessus du calque de fond */
+    z-index: 1;
 }
 
 header h1 {
-    color: #87ceeb; /* Bleu ciel doux pour le titre */
+    color: #87ceeb;
     font-size: 3.2em;
     margin-bottom: 12px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Ombre plus douce */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
     letter-spacing: 1px;
 }
 
 header p {
-    color: #b0c4de; /* Bleu clair grisâtre */
+    color: #b0c4de;
     font-size: 1.3em;
     font-weight: 300;
 }
 
-/* Barre de recherche personnalisée et plus belle */
 .search-container {
     padding: 25px 20px;
-    background-color: #1a3a5d; /* Même bleu que le header pour l'unité */
+    background-color: #1a3a5d;
     text-align: center;
     border-bottom: 2px solid #0f2b4a;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
@@ -64,27 +61,27 @@ header p {
 }
 
 .search-container input[type="text"] {
-    width: 70%; /* Plus large pour une meilleure saisie */
+    width: 70%;
     max-width: 500px;
     padding: 14px 20px;
-    border: 2px solid #4682b4; /* Bordure bleu acier */
-    border-radius: 30px; /* Bords très arrondis (pill-shaped) */
+    border: 2px solid #4682b4;
+    border-radius: 30px;
     font-size: 1.2em;
-    background-color: #2b4f7a; /* Fond de l'input bleu moyen */
+    background-color: #2b4f7a;
     color: #f8f8f8;
     outline: none;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre interne */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 .search-container input[type="text"]:focus {
-    border-color: #87ceeb; /* Bordure bleu ciel au focus */
-    background-color: #3b6b9d; /* Légèrement plus clair au focus */
-    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5); /* Lueur bleue au focus */
+    border-color: #87ceeb;
+    background-color: #3b6b9d;
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
 }
 
 .search-container input[type="text"]::placeholder {
-    color: #a0b0c0; /* Placeholder plus doux */
+    color: #a0b0c0;
 }
 
 main {
@@ -92,55 +89,55 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     padding: 30px 20px;
-    gap: 30px; /* Espacement accru entre les cartes */
+    gap: 30px;
     position: relative;
     z-index: 1;
 }
 
 .farm-card {
-    background-color: #2b4f7a; /* Bleu moyen pour les cartes */
-    border-radius: 12px; /* Bords plus arrondis */
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5); /* Ombre plus forte */
-    width: 340px; /* Plus large */
+    background-color: #2b4f7a;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+    width: 340px;
     overflow: hidden;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border: 1px solid #4682b4; /* Bordure bleu acier */
-    display: flex; /* Utilise flexbox pour le contenu de la carte */
+    border: 1px solid #4682b4;
+    display: flex;
     flex-direction: column;
 }
 
 .farm-card:hover {
-    transform: translateY(-10px) scale(1.03); /* Effet plus dynamique au survol */
+    transform: translateY(-10px) scale(1.03);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
 }
 
 .farm-card img {
     width: 100%;
-    height: 220px; /* Légèrement plus haut */
+    height: 220px;
     object-fit: cover;
     border-bottom: 1px solid #4682b4;
-    transition: transform 0.3s ease; /* Transition pour l'image au survol */
+    transition: transform 0.3s ease;
 }
 
 .farm-card:hover img {
-    transform: scale(1.05); /* Zoom léger de l'image au survol de la carte */
+    transform: scale(1.05);
 }
 
 .farm-info {
     padding: 20px;
-    flex-grow: 1; /* Prend l'espace restant dans la carte */
+    flex-grow: 1;
 }
 
 .farm-info h2 {
     margin: 0 0 15px 0;
-    color: #87ceeb; /* Bleu ciel pour les titres de carte */
+    color: #87ceeb;
     font-size: 1.8em;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .farm-info p {
     margin: 0 0 10px 0;
-    color: #c0d0e0; /* Texte bleu clair */
+    color: #c0d0e0;
 }
 
 footer {
@@ -153,6 +150,81 @@ footer {
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 1;
+}
+
+/* Style pour l'interface de détails */
+.hidden-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-container {
+    background-color: #1a3a5d;
+    border: 2px solid #4682b4;
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    position: relative;
+    animation: fadeIn 0.5s ease-out;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.details-container h2 {
+    color: #87ceeb;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.details-container p {
+    color: #c0d0e0;
+}
+
+.details-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#closeButton:hover {
+    background-color: #c0392b;
+}
+
+/* Animation pour l'apparition de la boîte de détails */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Media Queries pour l'adaptabilité (Responsive Design) */
@@ -168,7 +240,7 @@ footer {
         font-size: 1em;
     }
     .farm-card {
-        width: 90%; /* Prend plus de largeur sur les petits écrans */
+        width: 90%;
     }
     .farm-card img {
         height: 180px;
